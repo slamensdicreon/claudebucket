@@ -2,37 +2,63 @@
 
 Interactive directory of the Dycom Industries operating company portfolio, built by Icreon for the SitecoreAI experience layer and SAP SuccessFactors recruiting pursuit. The explorer maps 41+ separately branded subsidiaries into a single source of truth so the pursuit team can scope a unified employer brand and the 4,000-hire program across two labor pools.
 
-Built in the Icreon design system: brand blue `#386AFF`, the New Hero typeface with an Inter fallback, and the official Icreon wordmark logo.
+Built as a **Next.js (App Router) application** ready to host on **Vercel**, styled in the Icreon design system: brand blue `#386AFF`, the New Hero typeface with an Inter fallback, and the official Icreon wordmark logo.
 
 ## What it does
 
-- **Four-tier value chain diagram** rendered from the data contract, with the Dycom segment tier called out as the anchor.
-- **Faceted company directory** filterable by segment, service line, customer segment, region, and confidence, plus free-text search across name, HQ, region, customers, and notes.
+- **Four-tier value chain diagram** rendered server-side from the data contract, with the Dycom segment tier called out as the anchor.
+- **Faceted company directory** (client component) filterable by segment, service line, customer segment, region, and confidence, plus free-text search across name, HQ, region, customers, and notes.
 - **Confidence flags** distinguish documented entries from directional attributions and roster items awaiting confirmation.
 - **Expandable cards** surface acquisition history and capability notes on click.
-- **Live headline metrics** (operating companies, backlog, revenue, hire target) hydrate from the same JSON.
+- **Live headline metrics** (operating companies, backlog, revenue, hire target) read from the same JSON at build time.
 
-## Running it
+## Tech
 
-The app fetches its dataset over HTTP, so serve the folder rather than opening the file directly:
+- Next.js 16 App Router, React 19, TypeScript
+- The home route prerenders as static content (SSG), so Vercel serves it from the edge with no server cost
+- `next/font` optimizes the Inter fallback; no external font requests at runtime
+- Zero client data fetching: the dataset is imported as a typed module and bundled
+
+## Local development
 
 ```bash
-python3 -m http.server 8123
-# then open http://127.0.0.1:8123
+npm install
+npm run dev      # http://localhost:3000
 ```
 
-Any static host works. No build step and no dependencies.
+Production build and preview:
+
+```bash
+npm run build
+npm run start
+```
+
+## Deploy to Vercel
+
+The project is zero-config for Vercel (Next.js is auto-detected).
+
+- **Dashboard**: import the Git repository at vercel.com/new. Framework preset resolves to Next.js, build command `next build`, output handled automatically. Deploy.
+- **CLI**: `npm i -g vercel && vercel` (preview) or `vercel --prod` (production).
+
+No environment variables are required.
 
 ## Structure
 
 ```
-index.html                     Page shell, hero, value chain, directory, pursuit note
-assets/css/icreon.css          Icreon design tokens and components
-assets/js/app.js               Data load, facet build, filter, sort, render
-assets/img/icreon-logo.svg     Official Icreon wordmark (black + blue mark)
-assets/img/icreon-logo-light.svg  White wordmark variant for dark surfaces
-assets/img/icreon-mark.svg     Blue arrow glyph (favicon)
-data/dycom-companies.json      Data contract (section 4 of the brief)
+app/
+  layout.tsx            Root layout, metadata, font wiring
+  page.tsx              Page shell: app bar, hero, value chain, directory, pursuit, footer
+  globals.css           Icreon design tokens and components
+components/
+  IcreonLogo.tsx        Official Icreon wordmark (inline SVG)
+  ValueChain.tsx        Four-tier diagram (server component)
+  Directory.tsx         Faceted filter, search, sort, cards (client component)
+lib/
+  data.ts               Typed dataset import + helpers (region grouping, currency)
+data/
+  dycom-companies.json  Data contract (section 4 of the brief)
+public/
+  icreon-logo.svg, icreon-logo-light.svg, icreon-mark.svg
 ```
 
 ## Data contract
