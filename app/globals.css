@@ -485,6 +485,130 @@ section.block { padding: 52px 0; }
   .hero__inner { padding: 40px 24px 32px; }
 }
 
+/* ---------------------------------------------------------- */
+/* App bar navigation                                          */
+/* ---------------------------------------------------------- */
+.appbar__nav { display: flex; align-items: center; gap: 4px; }
+.appbar__nav a {
+  font-size: 13.5px; font-weight: 600; color: var(--ink-700);
+  padding: 8px 12px; border-radius: 9px; transition: background 0.14s, color 0.14s;
+}
+.appbar__nav a:hover { background: var(--surface-2); color: var(--ink); }
+
+/* Anchor offset so sticky bar never covers section tops */
+#ecosystem, #directory { scroll-margin-top: 84px; }
+
+/* ---------------------------------------------------------- */
+/* Ecosystem layer cake                                        */
+/* ---------------------------------------------------------- */
+.cake { max-width: 980px; margin: 0 auto; }
+
+.layer {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 26px 30px 28px;
+  background: var(--surface);
+  box-shadow: 0 10px 30px rgba(11, 15, 25, 0.06);
+  overflow: hidden;
+}
+.layer__watermark {
+  position: absolute;
+  top: 8px; right: 20px;
+  font-size: 92px; font-weight: 800; line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--icreon-blue);
+  opacity: 0.06;
+  pointer-events: none;
+}
+.layer__head { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; position: relative; }
+.layer__num {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 40px; height: 34px; padding: 0 10px;
+  border-radius: 9px;
+  background: var(--icreon-blue); color: #fff;
+  font-size: 15px; font-weight: 800; letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.layer__head h3 { margin: 0; font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+.layer__kicker {
+  margin-left: auto;
+  font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em;
+  color: var(--icreon-blue-700);
+  background: var(--icreon-blue-050);
+  border: 1px solid var(--icreon-blue-100);
+  padding: 5px 11px; border-radius: var(--radius-pill);
+}
+.layer__summary { margin: 12px 0 16px; font-size: 14px; color: var(--ink-700); position: relative; }
+.layer__items { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; position: relative; }
+.layer__items li {
+  font-size: 12.5px; line-height: 1.35; font-weight: 500;
+  color: var(--ink-700);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  padding: 7px 12px; border-radius: 9px;
+}
+
+/* Anchor layer: the Dycom tier, in brand blue */
+.layer--anchor {
+  background: linear-gradient(135deg, var(--icreon-blue) 0%, #2f5bff 100%);
+  border-color: var(--icreon-blue);
+  color: #fff;
+  box-shadow: 0 22px 46px rgba(56, 106, 255, 0.30);
+  transform: scale(1.02);
+  z-index: 1;
+}
+.layer--anchor .layer__watermark { color: #fff; opacity: 0.14; }
+.layer--anchor .layer__num { background: #fff; color: var(--icreon-blue); }
+.layer--anchor .layer__head h3 { color: #fff; }
+.layer--anchor .layer__kicker { background: rgba(255, 255, 255, 0.16); border-color: rgba(255, 255, 255, 0.28); color: #fff; }
+.layer--anchor .layer__summary { color: rgba(255, 255, 255, 0.85); }
+.layer--anchor .layer__items li { background: rgba(255, 255, 255, 0.14); border-color: rgba(255, 255, 255, 0.22); color: #fff; }
+.layer__flag {
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-top: 16px; position: relative;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.02em;
+  color: var(--icreon-blue); background: #fff;
+  padding: 7px 13px; border-radius: var(--radius-pill);
+}
+.layer__flag::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--icreon-blue); }
+
+/* Base layer: the delivery foundation, in ink */
+.layer--base { background: var(--ink); border-color: var(--ink); color: #fff; }
+.layer--base .layer__watermark { color: #fff; opacity: 0.09; }
+.layer--base .layer__head h3 { color: #fff; }
+.layer--base .layer__kicker { background: rgba(255, 255, 255, 0.10); border-color: rgba(255, 255, 255, 0.20); color: #fff; }
+.layer--base .layer__summary { color: rgba(255, 255, 255, 0.72); }
+.layer--base .layer__items li { background: rgba(255, 255, 255, 0.08); border-color: rgba(255, 255, 255, 0.16); color: #e7eaec; }
+
+/* Downward flow connectors */
+.connector {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: 10px 0; color: var(--ink-muted);
+}
+.connector__label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; }
+.connector svg { color: var(--icreon-blue); }
+
+/* CTA into the directory */
+.cake-cta { display: flex; justify-content: center; margin-top: 34px; }
+.cake-cta a {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-size: 15px; font-weight: 600; color: #fff;
+  background: var(--icreon-blue);
+  padding: 13px 24px; border-radius: var(--radius-pill);
+  box-shadow: 0 10px 26px rgba(56, 106, 255, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+.cake-cta a:hover { background: var(--icreon-blue-700); color: #fff; transform: translateY(-2px); box-shadow: 0 14px 32px rgba(56, 106, 255, 0.34); }
+
+@media (max-width: 620px) {
+  .layer { padding: 22px 20px 24px; }
+  .layer__watermark { font-size: 66px; }
+  .layer__head h3 { font-size: 17px; }
+  .layer__kicker { margin-left: 0; }
+  .layer--anchor { transform: none; }
+}
+
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }

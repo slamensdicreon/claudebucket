@@ -1,5 +1,5 @@
 import IcreonLogo from "@/components/IcreonLogo";
-import ValueChain from "@/components/ValueChain";
+import LayerCake from "@/components/LayerCake";
 import Directory from "@/components/Directory";
 import { data, fmtUSD } from "@/lib/data";
 
@@ -31,6 +31,10 @@ export default function Home() {
             <small>Operating company intelligence for the recruiting pursuit</small>
           </div>
           <span className="appbar__spacer" />
+          <nav className="appbar__nav" aria-label="Sections">
+            <a href="#ecosystem">Ecosystem</a>
+            <a href="#directory">Directory</a>
+          </nav>
           <span className="appbar__tag">
             <b>Icreon</b> × Dycom pursuit
           </span>
@@ -76,22 +80,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Value chain */}
-      <section className="block" style={{ background: "var(--surface-2)" }}>
+      {/* Ecosystem layer cake */}
+      <section id="ecosystem" className="block" style={{ background: "var(--surface-2)" }}>
         <div className="wrap">
-          <div className="section-head">
-            <h2>The four-tier value chain</h2>
-            <p>
-              Dycom sits mid-stream, converting customer capital into built infrastructure. Demand flows down from
-              carrier and public funding into field labor markets and connected communities.
+          <div className="section-head" style={{ textAlign: "center", margin: "0 auto 32px" }}>
+            <h2>The ecosystem, top to bottom</h2>
+            <p style={{ marginInline: "auto" }}>
+              Read the four tiers as a layer cake. Capital enters at the demand layer and converts into built
+              infrastructure and hires by the delivery layer. Dycom occupies the middle layer, where carrier and public
+              capex becomes field labor demand and the recruiting surface Icreon unifies.
             </p>
           </div>
-          <ValueChain />
+          <LayerCake />
+          <div className="cake-cta">
+            <a href="#directory">
+              Explore the 41+ operating companies
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Directory */}
-      <section className="block" style={{ background: "var(--surface)" }}>
+      <section id="directory" className="block" style={{ background: "var(--surface)" }}>
         <div className="wrap">
           <div className="section-head">
             <h2>Operating company directory</h2>
