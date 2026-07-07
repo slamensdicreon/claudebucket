@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dycom Ecosystem Explorer &middot; Icreon</title>
+  <meta name="description" content="Interactive directory of the Dycom Industries operating company portfolio, built by Icreon for the SitecoreAI and SAP SuccessFactors recruiting pursuit." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/icreon-mark.svg" />
+  <link rel="stylesheet" href="assets/css/icreon.css" />
+</head>
+<body>
+
+  <!-- App bar ------------------------------------------------ -->
+  <header class="appbar">
+    <div class="appbar__inner">
+      <a class="appbar__logo" href="https://www.icreon.com" aria-label="Icreon home">
+        <svg width="117" height="24" viewBox="0 0 117 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Icreon">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.02251 12.0004C5.02251 6.44862 9.20833 1.95704 14.8451 1.95704C19.2822 1.95704 22.8819 4.71892 24.1097 8.56889H20.9006C19.8403 6.25299 17.5799 4.80247 14.901 4.80247C10.8827 4.80247 8.03621 8.03868 8.03621 11.9723C8.03621 15.9339 10.9105 19.1979 14.901 19.1979C17.5519 19.1979 19.8123 17.7474 20.8448 15.4595H24.1097C22.8541 19.2816 19.2822 22.0434 14.8451 22.0434C9.20833 22.0436 5.02251 17.5521 5.02251 12.0004ZM35.1111 14.1982L36.8551 18.8532H39.7928V21.7649L34.8883 21.7623L32.1716 14.5113H28.9096V21.7648H25.868V2.23607H33.4583C37.1134 2.23607 39.7928 4.63532 39.7928 8.3736C39.7928 11.3866 38.0626 13.4789 35.5232 14.1486L35.1111 14.1982ZM33.0676 4.99795H28.9096V11.7775H33.0676C35.3002 11.7775 36.7511 10.5494 36.7511 8.3736C36.7511 6.22548 35.3279 4.99795 33.0676 4.99795ZM3.04175 2.23608H0V21.7648H3.04175V2.23608ZM54.6661 2.23607H42.1645V21.7652H54.6661V18.9195H45.2062V13.2004H53.801V10.5218H45.2062V5.08169H54.6661V2.23607ZM55.6704 12.0004C55.6704 6.44862 59.8563 1.95704 65.4931 1.95704C71.1299 1.95704 75.3157 6.44862 75.3157 12.0004C75.3157 17.5522 71.1297 22.0436 65.4931 22.0436C59.8565 22.0436 55.6704 17.5521 55.6704 12.0004ZM72.274 12.0004C72.274 8.03887 69.344 4.88641 65.4935 4.88641C61.643 4.88641 58.6845 8.03887 58.6845 12.0004C58.6845 15.962 61.6425 19.0865 65.4935 19.0865C69.3444 19.0865 72.274 15.9618 72.274 12.0004ZM93.0353 21.7648L87.2811 21.7622L81.0563 5.14764H80.1989V21.7648H77.2687V2.23607L83.0231 2.23858L89.2479 18.8532H90.1052V2.23607H93.0353V21.7648Z" fill="#000000"/>
+          <path d="M112.291 10.4298H99.4648V13.5919H112.291V10.4298ZM114.725 11.3029L116.961 9.06729L107.934 0.0426447L107.892 0L105.655 2.23564L114.682 11.2602L114.725 11.3029ZM105.698 21.7215L105.655 21.7643L107.892 24L116.919 14.9754L116.961 14.9326L114.725 12.697L105.698 21.7215Z" fill="#386AFF"/>
+        </svg>
+      </a>
+      <span class="appbar__divider"></span>
+      <div class="appbar__title">
+        Dycom Ecosystem Explorer
+        <small>Operating company intelligence for the recruiting pursuit</small>
+      </div>
+      <span class="appbar__spacer"></span>
+      <span class="appbar__tag"><b>Icreon</b> &times; Dycom pursuit</span>
+    </div>
+  </header>
+
+  <!-- Hero --------------------------------------------------- -->
+  <section class="hero">
+    <div class="hero__inner">
+      <p class="eyebrow">SitecoreAI experience layer &middot; SAP SuccessFactors pipeline</p>
+      <h1>One recruiting experience across <span class="accent">41+ Dycom brands</span>.</h1>
+      <p class="hero__lede">
+        Dycom runs its acquired firms as separately branded subsidiaries, each carrying its own career site and candidate journey. The explorer maps the portfolio into a single source of truth so the pursuit team can scope a unified employer brand and hire 4,000 people across two labor pools.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat__value" id="stat-companies">41+</div>
+          <div class="stat__label">Operating companies</div>
+          <div class="stat__sub">Plus NTI, acquired May 2026</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-backlog">$9.54B</div>
+          <div class="stat__label">Total backlog</div>
+          <div class="stat__sub">Up 23.0% year over year</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-revenue">$6.25B</div>
+          <div class="stat__label">Revenue, trailing twelve months</div>
+          <div class="stat__sub">FY2027 guide $6.85B to $7.15B</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value" id="stat-hires">4,000</div>
+          <div class="stat__label">Target hires across the portfolio</div>
+          <div class="stat__sub">Outside plant crews and data center electricians</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value chain ------------------------------------------- -->
+  <section class="block" style="background:var(--surface-2)">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>The four-tier value chain</h2>
+        <p>Dycom sits mid-stream, converting customer capital into built infrastructure. Demand flows down from carrier and public funding into field labor markets and connected communities.</p>
+      </div>
+      <div class="chain" id="chain"></div>
+    </div>
+  </section>
+
+  <!-- Directory --------------------------------------------- -->
+  <section class="block" style="background:var(--surface)">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Operating company directory</h2>
+        <p>Filter the portfolio by segment, service line, customer segment, region, and confidence. Confidence flags mark documented entries against roster items that still need independent confirmation. Open a card to read the acquisition and capability notes.</p>
+        <div class="legend">
+          <span class="conf conf--documented">Documented in filings or company sources</span>
+          <span class="conf conf--directional">Directional, geography-based attribution</span>
+          <span class="conf conf--verify">Verify against the subsidiary directory</span>
+        </div>
+      </div>
+
+      <div class="directory">
+        <!-- Filter rail -->
+        <aside class="filters" aria-label="Filters">
+          <div class="filters__row">
+            <h3>Filters</h3>
+            <button class="btn-clear" id="clear" disabled>Clear all</button>
+          </div>
+          <div class="search">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+            <input id="search" type="search" placeholder="Search name, HQ, customer..." aria-label="Search companies" />
+          </div>
+          <div class="facets-wrap">
+            <div class="facet"><div class="facet__label">Segment</div><div id="facet-segment"></div></div>
+            <div class="facet"><div class="facet__label">Service line</div><div id="facet-service"></div></div>
+            <div class="facet"><div class="facet__label">Customer segment</div><div id="facet-serve"></div></div>
+            <div class="facet"><div class="facet__label">Region</div><div id="facet-region"></div></div>
+            <div class="facet"><div class="facet__label">Confidence</div><div id="facet-confidence"></div></div>
+          </div>
+        </aside>
+
+        <!-- Results -->
+        <div>
+          <div class="results__bar">
+            <div class="results__count" id="result-count">Loading...</div>
+            <div class="sort">
+              <label for="sort">Sort</label>
+              <select id="sort">
+                <option value="name">Name (A to Z)</option>
+                <option value="confidence">Confidence</option>
+                <option value="joined">Year joined (newest)</option>
+                <option value="segment">Segment</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid" id="grid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pursuit note ------------------------------------------ -->
+  <section class="block" style="background:var(--surface-2)">
+    <div class="wrap">
+      <div class="pursuit">
+        <div>
+          <h2>Why the pursuit lands</h2>
+          <p>Fragmentation is the opportunity. <strong>41+ separately branded career sites</strong> deliver an inconsistent candidate experience with no unified employer brand. Parkside and TelCom share one Clearwater, Minnesota base and even share job postings, so candidates in one town meet multiple Dycom brands competing for the same labor pool.</p>
+          <p>A <span class="accent">SitecoreAI</span> experience layer serves localized per-company recruiting front ends. <strong>SAP SuccessFactors</strong> runs underneath as the single applicant pipeline. One architecture now answers two recruiting motions: outside plant field crews and data center electricians.</p>
+        </div>
+        <div class="pursuit__points">
+          <div class="pursuit__point">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+            <div><b>Two labor pools, one experience layer</b><span>Building Systems adds data center electricians to existing outside plant crew demand.</span></div>
+          </div>
+          <div class="pursuit__point">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+            <div><b>Lumpy regional demand</b><span>A Gigapower market win at Ansco creates hundreds of hires in one metro on short notice.</span></div>
+          </div>
+          <div class="pursuit__point">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>
+            <div><b>Employer brand upside</b><span>A credible, unified recruiting experience closes a reputational gap, not only an efficiency gap.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer ------------------------------------------------- -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <svg width="90" height="19" viewBox="0 0 117 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Icreon">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5.02251 12.0004C5.02251 6.44862 9.20833 1.95704 14.8451 1.95704C19.2822 1.95704 22.8819 4.71892 24.1097 8.56889H20.9006C19.8403 6.25299 17.5799 4.80247 14.901 4.80247C10.8827 4.80247 8.03621 8.03868 8.03621 11.9723C8.03621 15.9339 10.9105 19.1979 14.901 19.1979C17.5519 19.1979 19.8123 17.7474 20.8448 15.4595H24.1097C22.8541 19.2816 19.2822 22.0434 14.8451 22.0434C9.20833 22.0436 5.02251 17.5521 5.02251 12.0004ZM35.1111 14.1982L36.8551 18.8532H39.7928V21.7649L34.8883 21.7623L32.1716 14.5113H28.9096V21.7648H25.868V2.23607H33.4583C37.1134 2.23607 39.7928 4.63532 39.7928 8.3736C39.7928 11.3866 38.0626 13.4789 35.5232 14.1486L35.1111 14.1982ZM33.0676 4.99795H28.9096V11.7775H33.0676C35.3002 11.7775 36.7511 10.5494 36.7511 8.3736C36.7511 6.22548 35.3279 4.99795 33.0676 4.99795ZM3.04175 2.23608H0V21.7648H3.04175V2.23608ZM54.6661 2.23607H42.1645V21.7652H54.6661V18.9195H45.2062V13.2004H53.801V10.5218H45.2062V5.08169H54.6661V2.23607ZM55.6704 12.0004C55.6704 6.44862 59.8563 1.95704 65.4931 1.95704C71.1299 1.95704 75.3157 6.44862 75.3157 12.0004C75.3157 17.5522 71.1297 22.0436 65.4931 22.0436C59.8565 22.0436 55.6704 17.5521 55.6704 12.0004ZM72.274 12.0004C72.274 8.03887 69.344 4.88641 65.4935 4.88641C61.643 4.88641 58.6845 8.03887 58.6845 12.0004C58.6845 15.962 61.6425 19.0865 65.4935 19.0865C69.3444 19.0865 72.274 15.9618 72.274 12.0004ZM93.0353 21.7648L87.2811 21.7622L81.0563 5.14764H80.1989V21.7648H77.2687V2.23607L83.0231 2.23858L89.2479 18.8532H90.1052V2.23607H93.0353V21.7648Z" fill="#000000"/>
+          <path d="M112.291 10.4298H99.4648V13.5919H112.291V10.4298ZM114.725 11.3029L116.961 9.06729L107.934 0.0426447L107.892 0L105.655 2.23564L114.682 11.2602L114.725 11.3029ZM105.698 21.7215L105.655 21.7643L107.892 24L116.919 14.9754L116.961 14.9326L114.725 12.697L105.698 21.7215Z" fill="#386AFF"/>
+        </svg>
+        <span>Your Digital Velocity Partner</span>
+      </div>
+      <div class="footer__meta">
+        Data compiled from the Dycom FY2026 10-K, press releases, and subsidiary sources. Last updated <span id="meta-asof">July 7, 2026</span>. Refresh fiscal figures against the latest 10-K before external use. Confidence flags mark every inference.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Value chain renders from the same JSON contract. Inlined for a single fetch. */
+    (async function () {
+      try {
+        const d = await (await fetch("data/dycom-companies.json")).json();
+        const box = document.getElementById("chain");
+        d.value_chain.forEach(function (t) {
+          var anchor = t.tier === 3 ? " tier--anchor" : "";
+          var lis = t.items.map(function (i) { return "<li>" + i + "</li>"; }).join("");
+          var elem = document.createElement("div");
+          elem.className = "tier" + anchor;
+          elem.innerHTML =
+            '<span class="tier__n">' + t.tier + "</span>" +
+            "<h3>" + t.label + "</h3>" +
+            '<p class="tier__summary">' + t.summary + "</p>" +
+            "<ul>" + lis + "</ul>";
+          box.append(elem);
+        });
+      } catch (e) { /* directory script surfaces load errors */ }
+    })();
+  </script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
