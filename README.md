@@ -1,72 +1,208 @@
-# Dycom Ecosystem Explorer
+<p align="center">
+  <img src="src/renderer/src/assets/logo-mark.png" alt="Crowdmind logo" width="96" />
+</p>
 
-Interactive directory of the Dycom Industries operating company portfolio, built by Icreon for the SitecoreAI experience layer and SAP SuccessFactors recruiting pursuit. The explorer maps 41+ separately branded subsidiaries into a single source of truth so the pursuit team can scope a unified employer brand and the 4,000-hire program across two labor pools.
+<h1 align="center">Crowdmind</h1>
 
-Built as a **Next.js (App Router) application** ready to host on **Vercel**, styled in the Icreon design system: brand blue `#386AFF`, the New Hero typeface with an Inter fallback, and the official Icreon wordmark logo.
+<p align="center">
+  Build synthetic research panels, test ideas with AI personas, run follow-up roundtables, and export stakeholder-ready reports.
+</p>
 
-## What it does
+<p align="center">
+  <a href="https://github.com/Brokenwatch24/crowdmind/releases/latest"><strong>Download for Windows</strong></a>
+  ·
+  <a href="#features">Features</a>
+  ·
+  <a href="#marketplace-templates">Templates</a>
+  ·
+  <a href="#mcp-for-agentic-workflows">MCP</a>
+</p>
 
-- **Four-tier value chain diagram** rendered server-side from the data contract, with the Dycom segment tier called out as the anchor.
-- **Faceted company directory** (client component) filterable by segment, service line, customer segment, region, and confidence, plus free-text search across name, HQ, region, customers, and notes.
-- **Confidence flags** distinguish documented entries from directional attributions and roster items awaiting confirmation.
-- **Expandable cards** surface acquisition history and capability notes on click.
-- **Live headline metrics** (operating companies, backlog, revenue, hire target) read from the same JSON at build time.
+<p align="center">
+  <img alt="Version" src="https://img.shields.io/github/v/release/Brokenwatch24/crowdmind?label=release" />
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-green" />
+  <img alt="Local first" src="https://img.shields.io/badge/local--first-SQLite-blue" />
+  <img alt="Electron" src="https://img.shields.io/badge/Electron-React%20%2B%20TypeScript-9cf" />
+</p>
 
-## Tech
+## Why Crowdmind?
 
-- Next.js 16 App Router, React 19, TypeScript
-- The home route prerenders as static content (SSG), so Vercel serves it from the edge with no server cost
-- `next/font` optimizes the Inter fallback; no external font requests at runtime
-- Zero client data fetching: the dataset is imported as a typed module and bundled
+Crowdmind is a local-first desktop app for fast qualitative research before you spend money on real panels, ads, prototypes, or customer interviews.
 
-## Local development
+Create a panel of synthetic personas, show them a product, message, landing page, pricing proposal, image, PDF, or multi-step funnel, and get structured reactions: scores, objections, positive signals, recurring themes, confidence indicators, and follow-up answers.
+
+It is built for founders, product marketers, researchers, agencies, and product teams who want directional signal in minutes while keeping their research data on their own machine.
+
+## What It Does
+
+- **Create realistic persona panels** manually, from CSV, from marketplace templates, or with AI.
+- **Run stimulus tests** with text, multiple images, PDFs, or full funnel sequences.
+- **Continue any test** with follow-up questions, selected-persona follow-ups, or full-panel roundtables.
+- **See the swarm** directly inside the test results page, with sentiment-colored nodes and drag selection.
+- **Chat 1:1 with any persona** from their profile or directly from a test response.
+- **Use multiple LLM providers**: OpenAI, Anthropic, Gemini, OpenRouter, or the built-in offline local provider.
+- **Export reports** as JSON, Markdown, summary PDF, or a full investor/client-style PDF report.
+- **Run locally with SQLite**. Your workspaces, panels, tests, notes, and chat history stay on your machine.
+- **Connect agentic workflows** through the included CrowdMind MCP server.
+
+## Reports
+
+Crowdmind turns raw synthetic feedback into shareable research artifacts.
+
+PDF export supports:
+
+- **Summary report**: concise methodology, findings, recommendations, and limitations.
+- **Full report**: stimulus, sentiment, scorecard, recurring themes, objections, positive signals, panel voices, persona-by-persona detail, and recommendations.
+
+Markdown and raw JSON exports are also available for Notion, docs, PRs, and custom analysis workflows.
+
+## Features
+
+### Research Panels
+
+- Workspaces and panels for organizing client, product, or market research.
+- AI-generated personas from a professional research brief.
+- Manual persona creation and “improve with AI”.
+- CSV import from survey/customer data.
+- Persona version history, so historical results stay tied to the persona version that produced them.
+- Persona avatars from deterministic seeds, uploads, or AI image generation.
+
+### Testing
+
+- Single stimulus tests: text, image, PDF, or multimodal.
+- Multi-attachment tests with multiple images and PDFs.
+- Funnel tests with ordered stages, drag-and-drop stage editing, and funnel templates.
+- Individual mode for fast parallel responses.
+- Focus-group mode where personas see a rotating summary of peer reactions.
+- Scorecards for custom criteria like clarity, trust, purchase intent, pricing fit, or usability.
+
+### Analysis
+
+- Executive summary.
+- Confidence and diversity badge.
+- Recurring themes with representative quotes.
+- Objections and positive signals.
+- Benchmarking against previous tests in the same panel.
+- Audience comparisons and panel timeline.
+- Notes with Markdown for custom analysis.
+
+### Continuation
+
+- Ask more questions after a test.
+- Select a subset of personas from the swarm.
+- Ask the full panel as a roundtable.
+- Use quick prompts for improving message, pricing, trust, or conversion.
+- Jump from any answer to the persona profile or 1:1 chat.
+
+### Providers
+
+- OpenAI
+- Anthropic
+- Google Gemini
+- OpenRouter
+- Local deterministic provider, no API key required
+
+API keys are stored locally. When available, Crowdmind uses the OS keychain through Electron `safeStorage`; if OS encryption is unavailable, the Settings page makes that clear.
+
+## Getting Started
+
+### Use the App
+
+Download the latest Windows installer:
+
+https://github.com/Brokenwatch24/crowdmind/releases/latest
+
+No API key is required to try Crowdmind. Use the Local provider and load the demo workspace from the welcome screen.
+
+### Run From Source
+
+Requirements:
+
+- Node.js 20+
+- npm
+- Windows users compiling native modules need Python and Visual Studio Build Tools with Desktop C++ workload.
 
 ```bash
+git clone https://github.com/Brokenwatch24/crowdmind.git
+cd crowdmind
 npm install
-npm run dev      # http://localhost:3000
+npm run dev
 ```
 
-Production build and preview:
+## Useful Commands
 
 ```bash
-npm run build
-npm run start
+npm run dev         # launch the Electron app in development
+npm run typecheck   # TypeScript checks
+npm run smoke-test  # end-to-end smoke test with the local provider
+npm run build       # production build
+npm run dist:win    # Windows installer in release/
+npm run mcp         # build and run the CrowdMind MCP server
 ```
 
-## Deploy to Vercel
+## MCP For Agentic Workflows
 
-The project is zero-config for Vercel (Next.js is auto-detected).
+Crowdmind includes an MCP server for tools like Codex and other MCP-compatible agents.
 
-- **Dashboard**: import the Git repository at vercel.com/new. Framework preset resolves to Next.js, build command `next build`, output handled automatically. Deploy.
-- **CLI**: `npm i -g vercel && vercel` (preview) or `vercel --prod` (production).
-
-No environment variables are required.
-
-## Structure
-
-```
-app/
-  layout.tsx            Root layout, metadata, font wiring
-  page.tsx              Page shell: app bar, hero, value chain, directory, pursuit, footer
-  globals.css           Icreon design tokens and components
-components/
-  IcreonLogo.tsx        Official Icreon wordmark (inline SVG)
-  ValueChain.tsx        Four-tier diagram (server component)
-  Directory.tsx         Faceted filter, search, sort, cards (client component)
-lib/
-  data.ts               Typed dataset import + helpers (region grouping, currency)
-data/
-  dycom-companies.json  Data contract (section 4 of the brief)
-public/
-  icreon-logo.svg, icreon-logo-light.svg, icreon-mark.svg
+```bash
+npm run mcp -- --db "C:\path\to\crowdmind.sqlite"
 ```
 
-## Data contract
+The MCP server can list workspaces, panels, personas, generate local persona previews, save personas, run simple local tests, and fetch compact test results.
 
-`data/dycom-companies.json` is the single source of truth. The UI hardcodes no roster data, so verification updates land in the JSON alone and flow through untouched. The schema follows section 4 of the ecosystem map brief: `meta`, `service_lines`, `customer_segments`, `segments`, `value_chain`, `companies`, and `pending_additions`.
+## Marketplace Templates
 
-Refresh fiscal figures against the latest 10-K before external use. Customer concentration percentages currently come from fiscal 2025 Q2 and carry a refresh flag in the brief. National Technology Integrators (NTI) sits in `pending_additions` until close details are confirmed, then promotes to company 42.
+Crowdmind ships with panel templates for:
 
-## Sources
+- B2B SaaS buyers
+- Consumer LatAm segments
+- Families and middle-class households
+- Gen Z social shoppers
+- Restaurant and hotel operators in Colombia
+- SaaS founders and operators in LatAm
 
-Dycom FY2026 10-K and Exhibit 21.1, Dycom press releases, subsidiary websites, and industry reporting. Confidence flags mark every inference. Logo and brand colors sourced from the Icreon production site (icreon.com), July 2026.
+You can export any panel as a `.json` template and share it. The app can also pull new templates directly from this repository without waiting for an app update.
+
+To contribute one, see:
+
+[docs/MARKETPLACE_TEMPLATES.md](docs/MARKETPLACE_TEMPLATES.md)
+
+## Architecture
+
+- **Desktop shell**: Electron + electron-vite
+- **Renderer**: React 18 + TypeScript + Tailwind + Radix primitives
+- **State**: Zustand
+- **Database**: SQLite with `better-sqlite3` and Drizzle schema definitions
+- **LLM layer**: provider adapters with schema validation and retry/backoff
+- **Reports**: self-contained HTML rendered to PDF through Electron
+- **MCP**: stdio server for local agentic workflows
+
+All database, filesystem, API key, and provider calls run in the Electron main process. The renderer talks through a typed `window.crowdmind` API exposed by the preload script.
+
+## Auto-Update
+
+Packaged builds check GitHub Releases through `electron-updater`. Updates are never installed silently:
+
+1. Crowdmind shows an update banner.
+2. You click download.
+3. After download, you choose when to restart and install.
+
+Release assets must include the installer, blockmap, and `latest.yml`.
+
+## Status
+
+Current release: [v0.2.4](https://github.com/Brokenwatch24/crowdmind/releases/tag/v0.2.4)
+
+Verified locally with:
+
+```bash
+npm run typecheck
+npm run smoke-test
+npm run dist:win
+```
+
+macOS and Linux packaging are configured but not yet release-tested from their native platforms.
+
+## License
+
+MIT
