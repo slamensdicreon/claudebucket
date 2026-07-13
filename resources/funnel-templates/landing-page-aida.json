@@ -1,0 +1,23 @@
+{
+  "formatVersion": 1,
+  "nombre": "Landing page (AIDA)",
+  "descripcion": "El recorrido clásico de una landing page — Atención, Interés, Deseo, Acción. Bueno para testear páginas de producto o de campaña completas, no solo un anuncio suelto.",
+  "etapas": [
+    {
+      "titulo": "Hero — primera impresión (Atención)",
+      "estimuloContenido": "Llegas a la landing page. Lo primero que ves es un título grande, una imagen del producto, y un botón \"Empieza gratis\"."
+    },
+    {
+      "titulo": "Beneficios (Interés)",
+      "estimuloContenido": "Haces scroll y ves 3 columnas explicando los beneficios principales del producto, cada una con un ícono y 2 líneas de texto."
+    },
+    {
+      "titulo": "Prueba social (Deseo)",
+      "estimuloContenido": "Ves testimonios de 3 clientes con foto, nombre, empresa, y una cita corta sobre su experiencia con el producto."
+    },
+    {
+      "titulo": "Precio y llamado a la acción (Acción)",
+      "estimuloContenido": "Llegas a la sección de precios: 3 planes, el del medio marcado como \"Más popular\". Cada plan tiene un botón \"Empezar ahora\"."
+    }
+  ]
+}

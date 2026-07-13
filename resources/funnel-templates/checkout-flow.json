@@ -1,0 +1,23 @@
+{
+  "formatVersion": 1,
+  "nombre": "Flujo de compra / checkout",
+  "descripcion": "Del carrito a la confirmación del pedido — el funnel clásico de e-commerce para detectar en qué paso se cae el precio percibido o la confianza.",
+  "etapas": [
+    {
+      "titulo": "Carrito de compras",
+      "estimuloContenido": "Ves tu carrito con 2 productos, el subtotal, y un botón \"Continuar al pago\". No se muestra el costo de envío todavía."
+    },
+    {
+      "titulo": "Datos de envío",
+      "estimuloContenido": "Llenas tu dirección de envío. La página muestra el tiempo estimado de entrega: 3-5 días hábiles."
+    },
+    {
+      "titulo": "Costo de envío y método de pago",
+      "estimuloContenido": "Se muestra el costo final con envío incluido — el envío agrega un 12% al subtotal original. Puedes pagar con tarjeta o en efectivo contra entrega."
+    },
+    {
+      "titulo": "Confirmación del pedido",
+      "estimuloContenido": "Ves la pantalla de confirmación con el número de orden y un resumen de lo que compraste."
+    }
+  ]
+}

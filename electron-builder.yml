@@ -1,0 +1,56 @@
+appId: com.crowdmind.app
+productName: Crowdmind
+artifactName: ${productName}-Setup-${version}.${ext}
+copyright: Copyright © 2026 Crowdmind contributors
+
+directories:
+  output: release
+  buildResources: build
+
+files:
+  - out/**/*
+  - package.json
+
+extraResources:
+  - from: resources/templates
+    to: templates
+  - from: resources/funnel-templates
+    to: funnel-templates
+
+asarUnpack:
+  - '**/*.node'
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: build/icon.png
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+
+mac:
+  target:
+    - target: dmg
+      arch:
+        - x64
+        - arm64
+  icon: build/icon.png
+  category: public.app-category.productivity
+
+linux:
+  target:
+    - target: AppImage
+      arch:
+        - x64
+  icon: build/icon.png
+  category: Office
+
+publish:
+  provider: github
+  owner: Brokenwatch24
+  repo: crowdmind

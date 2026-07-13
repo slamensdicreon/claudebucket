@@ -1,0 +1,23 @@
+{
+  "formatVersion": 1,
+  "nombre": "Flujo de inicio de sesión",
+  "descripcion": "Prueba una pantalla de login de principio a fin: credenciales, verificación de seguridad y acceso. Bueno para detectar dónde la gente abandona antes de entrar a tu producto.",
+  "etapas": [
+    {
+      "titulo": "Pantalla de login",
+      "estimuloContenido": "Ves la pantalla de inicio de sesión de la app/sitio: campos de correo y contraseña, botón \"Iniciar sesión\", enlace \"¿Olvidaste tu contraseña?\" y opción de iniciar sesión con Google."
+    },
+    {
+      "titulo": "Ingreso de credenciales",
+      "estimuloContenido": "Escribes tu correo y contraseña. El formulario valida en tiempo real y no muestra errores — los campos se ven correctos."
+    },
+    {
+      "titulo": "Verificación en dos pasos",
+      "estimuloContenido": "La app te pide un código de 6 dígitos enviado por SMS antes de dejarte entrar."
+    },
+    {
+      "titulo": "Acceso al dashboard",
+      "estimuloContenido": "Entras exitosamente y ves la pantalla principal por primera vez en esta sesión, con un mensaje de bienvenida."
+    }
+  ]
+}

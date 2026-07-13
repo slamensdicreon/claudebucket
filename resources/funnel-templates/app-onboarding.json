@@ -1,0 +1,23 @@
+{
+  "formatVersion": 1,
+  "nombre": "Onboarding de app",
+  "descripcion": "Las primeras pantallas que ve alguien después de instalar/registrarse — mide si el onboarding engancha o aburre.",
+  "etapas": [
+    {
+      "titulo": "Pantalla de bienvenida",
+      "estimuloContenido": "Abres la app por primera vez y ves una pantalla de bienvenida con el logo y un botón \"Comenzar\"."
+    },
+    {
+      "titulo": "Permisos solicitados",
+      "estimuloContenido": "La app pide permiso para acceder a notificaciones y a tu ubicación, explicando brevemente para qué los usa."
+    },
+    {
+      "titulo": "Tutorial rápido",
+      "estimuloContenido": "Ves 3 pantallas de tutorial deslizables mostrando las funciones principales, con puntos indicadores abajo."
+    },
+    {
+      "titulo": "Primera tarea completada",
+      "estimuloContenido": "La app te guía a completar tu primera acción real dentro del producto (ej. crear tu primer proyecto/publicación) y celebra cuando terminas."
+    }
+  ]
+}

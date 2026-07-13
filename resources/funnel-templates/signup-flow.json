@@ -1,0 +1,23 @@
+{
+  "formatVersion": 1,
+  "nombre": "Flujo de registro",
+  "descripcion": "De la creación de cuenta al primer uso — mide dónde se pierde gente al registrarse en tu producto.",
+  "etapas": [
+    {
+      "titulo": "Formulario de registro",
+      "estimuloContenido": "Ves un formulario de registro que pide: nombre completo, correo, contraseña, y confirmación de contraseña. Debajo hay un checkbox de términos y condiciones."
+    },
+    {
+      "titulo": "Verificación de correo",
+      "estimuloContenido": "Te llega un correo pidiendo confirmar tu cuenta con un enlace. Tienes que salir de la app para revisar tu bandeja de entrada."
+    },
+    {
+      "titulo": "Completar perfil",
+      "estimuloContenido": "Después de confirmar, la app te pide completar tu perfil: foto, empresa/rol, y 3 intereses para personalizar tu experiencia."
+    },
+    {
+      "titulo": "Pantalla de bienvenida",
+      "estimuloContenido": "Ves un tour rápido de 3 pantallas mostrando las funciones principales, con un botón \"Empezar\" al final."
+    }
+  ]
+}
